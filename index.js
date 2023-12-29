@@ -31,6 +31,15 @@ function createTimeBlocks() {
         } else {
             inputElStyle = "future";
         }
+
+        if (thisHour === presentHour) {
+            inputElStyle = "present";
+        }
+
+        let timeBlockEL = $("<form>").attr("class", "input-group row");
+        let hourContainer = $("<div>").attr("class", "col-2");
+        let hourEl = $("<div>").attr("class", "hour").text(hours).css("text-align", "right");
+        let inputEl = $("<textarea>").attr("class", `form-control textarea ${inputElStyle}`).attr("type", "text").attr("id", "input" + i).val(dailyTask);
         }
 
     }
