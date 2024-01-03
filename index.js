@@ -1,16 +1,16 @@
 $(document).ready(function () {
-    //Moment.js code for current date and time
-    let NowMoment = moment().format("MMMM Do YYYY");
-    let displayDate = document.getElementById("currentDay");
-    displayDate.innerHTML = NowMoment;
-    let currentHour = moment().format("HH");
-  
-    // Button function to clear local storage and clear contents
-    $("#clearFieldsBtn").click(function (event) {
-      event.preventDefault;
-      $("textarea").val("");
-      localStorage.clear();
-    });
+  //Moment.js code for current date and time
+  let NowMoment = moment().format("MMMM Do YYYY");
+  let displayDate = document.getElementById("currentDay");
+  displayDate.innerHTML = NowMoment;
+  let currentHour = moment().format("HH");
+
+  // Button function to clear local storage and clear contents
+  $("#clearFieldsBtn").click(function (event) {
+    event.preventDefault;
+    $("textarea").val("");
+    localStorage.clear();
+  });
   
     //grabs hour from each time slot and compares it to actual time
     $(".time-div").each(function () {
@@ -47,3 +47,4 @@ $(document).ready(function () {
     $("#hour-16 .time-block").val(localStorage.getItem("16"));
     $("#hour-17 .time-block").val(localStorage.getItem("17"));
   });
+
